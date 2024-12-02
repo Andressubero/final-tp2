@@ -1,2 +1,3 @@
-import Model from './Model.js';
-export { Model };
+import Juego from './Juego.js';
+import Venta from './Venta.js';
+export { Juego, Venta };

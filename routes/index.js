@@ -1,8 +1,10 @@
 import { Router } from "express";
-import appRoutes from "./appRoutes.js";
+import ventasRoutes from "./ventasRoutes.js";
+import juegoRoutes from "./juegoRoutes.js";
 
 const routes = Router();
 
-routes.use("/app", appRoutes);
+routes.use("/ventas", ventasRoutes);
+routes.use("/juegos", juegoRoutes);
 
 export default routes;
