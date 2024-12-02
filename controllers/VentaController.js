@@ -16,6 +16,7 @@ class Controller {
   create = async (req, res) => {
     try {
       const { idJuego, cantidad  } = req.body;
+      
       const data = await this.service.create({ idJuego, cantidad });
       res.status(201).send({ success: true, data });
     } catch (error) {

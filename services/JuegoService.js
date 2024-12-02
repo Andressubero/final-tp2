@@ -3,6 +3,7 @@ import { validarJuego } from "../utils/validarJuego.js";
 
 class Service {
     model = new Juego();
+    
     getAll = async () => {
         try {
             const juegos = await this.model.obtenerTodos()
