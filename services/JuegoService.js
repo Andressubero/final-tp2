@@ -1,9 +1,9 @@
-import { Juego } from "../models/models.js";
+import { juego } from "../models/models.js";
 import { validarJuego } from "../utils/validarJuego.js";
 
 class Service {
-    model = new Juego();
-    
+    model =juego;
+
     getAll = async () => {
         try {
             const juegos = await this.model.obtenerTodos()

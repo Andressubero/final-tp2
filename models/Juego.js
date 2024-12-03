@@ -11,8 +11,19 @@ class Juego  {
         return this.juegos;
     }
 
-    disminuirStock(idJuego) {
-        //
+    disminuirStock(idJuego, cantidad) {
+
+        const juegoBuscado = this.juegos.find(j => j.id === Number.parseInt(idJuego));
+        
+        if (!juegoBuscado) {
+            throw new Error("El juego no existe");
+        }
+
+        if (juegoBuscado.stock < cantidad) {
+            throw new Error("No hay suficiente stock");
+        }
+
+        juegoBuscado.stock -= cantidad;
     }
 }
 

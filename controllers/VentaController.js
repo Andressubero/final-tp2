@@ -7,7 +7,7 @@ class Controller {
   getAll = async (req, res) => {
     try {
       const data = await this.service.getAll();
-      res.status(200).send({ success: true, message: data });
+      res.status(200).send({ success: true, data });
     } catch (error) {
       res.status(400).send({ success: false, message: error.message });
     }
@@ -16,7 +16,7 @@ class Controller {
   create = async (req, res) => {
     try {
       const { idJuego, cantidad  } = req.body;
-      
+
       const data = await this.service.create({ idJuego, cantidad });
       res.status(201).send({ success: true, data });
     } catch (error) {
